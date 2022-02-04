@@ -1,0 +1,47 @@
+.start{
+    display:flex;
+    flex-direction: column;
+    width:50%;
+    height:220px;
+    justify-content: flex-start;
+    margin-top: 150px;
+    margin-left: 300px;
+    flex-wrap: wrap;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left:50px;
+    padding-top: 70px ;
+    padding-bottom: 20px;
+    border: 1px solid;
+    border-color: rgb(206, 203, 203);
+    border-radius: 25px;
+    box-shadow:  10px 6px #d8d5d5;
+}
+
+.line1{
+    font-weight: bold;
+    margin-top: 40px;
+    line-height: 60px;
+    margin:0px;
+}
+
+.line2{
+    line-height: 30px;
+    margin:0px;
+}
+
+.line3{
+    line-height: 40px;
+    margin:0px;
+}
+
+.start-btn{
+    width:15%;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 10px;
+    border-color: dodgerblue;
+    height:35px;
+    font-size:15px;
+    margin-top: 10px;
+    font-weight: 800;
+}

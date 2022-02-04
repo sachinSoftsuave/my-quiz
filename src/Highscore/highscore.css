@@ -1,0 +1,50 @@
+.score{
+    display:flex;
+    flex-direction: column;
+    width:15%;
+    height:200px;
+    justify-content: flex-start;
+    margin-top: 150px;
+    margin-left: 600px;
+    flex-wrap: wrap;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 60px 40px;
+    border: 1px solid;
+    border-color: rgb(206, 203, 203);
+    border-radius: 25px;
+    box-shadow:  10px 6px #d8d5d5;
+   
+}
+
+.back-btn{
+    width:30%;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 10px;
+    border-color: dodgerblue;
+    height:40px;
+    font-size:15px;
+    margin-top: 10px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.btn-wrapper{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.clear-btn{
+    width:60%;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 10px;
+    border-color: dodgerblue;
+    height:40px;
+    font-size:15px;
+    margin-top: 10px;
+    font-weight: 800;
+    margin-left:10px;
+    cursor: pointer;
+}
