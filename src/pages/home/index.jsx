@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./index.css";
 import { useNavigate } from "react-router-dom";
+import { QuizContext } from "../../hooks/context";
 
 function Home() {
   let navigate = useNavigate();
+  const {setQuizStarted} = useContext(QuizContext);
 
   function handleClick() {
+    setQuizStarted(true)
     navigate("./quiz");
   }
 
