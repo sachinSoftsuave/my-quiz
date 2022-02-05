@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./highscore.css";
+import "./index.css";
 
 function HighScore() {
   let navigate = useNavigate();
@@ -13,7 +13,6 @@ function HighScore() {
       <h1>Highscores</h1>
       <div className="btn-wrapper">
         <button className="back-btn" onClick={goback}>
-          {" "}
           GoBack
         </button>
         <button className="clear-btn">Clear Highscore</button>

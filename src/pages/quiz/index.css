@@ -1,0 +1,32 @@
+.question{
+     display:flex;
+     flex-direction: column;
+     width:50%;
+     height:380px;
+     justify-content: flex-start;
+     margin-top: 150px;
+     margin-left: 300px;
+     flex-wrap: wrap;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     padding-left:50px;
+     padding-top: 50px ;
+     padding-bottom: 20px;
+     border: 1px solid;
+     border-color: rgb(206, 203, 203);
+     border-radius: 25px;
+     box-shadow:  10px 6px #d8d5d5;
+ }
+ 
+ .options{
+     background-color: dodgerblue;
+     height:40px;
+     padding-top: 15px;
+     width:90%;
+     border-radius: 10px;
+     padding-left:10px;
+     cursor:pointer;
+ }
+ 
+ .quiz {
+     line-height: 40px;
+ }
