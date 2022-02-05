@@ -14,6 +14,7 @@ function Timer() {
   useEffect(() => {
     if(isQuizStarted)
     {
+      setMinutes(50)
       startTimer()
     }
   },[isQuizStarted])
@@ -28,7 +29,7 @@ function Timer() {
       interval = setInterval(() => {
         setMinutes(minutes => minutes - 1);
       }, 1000);
-    } else {
+    } else if(minutes <=0) {
       clearInterval(interval);
       setIsActive(false);
       navigate('/results')
