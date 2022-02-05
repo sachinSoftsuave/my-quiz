@@ -9,13 +9,15 @@ function HighScore() {
     navigate("../");
   }
   return (
-    <div className="score">
-      <h1>Highscores</h1>
-      <div className="btn-wrapper">
-        <button className="back-btn" onClick={goback}>
-          GoBack
-        </button>
-        <button className="clear-btn">Clear Highscore</button>
+    <div className="scoreContainer">
+      <div className="modelHighScore">
+        <h1>Highscores</h1>
+        <div className="btnWrapper">
+          <button className="back-btn" onClick={goback}>
+            GoBack
+          </button>
+          <button className="clear-btn">Clear Highscore</button>
+        </div>
       </div>
     </div>
   );

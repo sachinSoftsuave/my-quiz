@@ -11,7 +11,7 @@ function App() {
         <Header />
         <Routes>
           {routes.map(({ path, element }) => {
-            return <Route exact path={path} element={element} />;
+            return <Route key={path} exact path={path} element={element} />;
           })}
         </Routes>
       </div>

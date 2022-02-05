@@ -10,7 +10,7 @@ function Result (){
     return(
         <div className='results'>
             <h1 className='line1'>All done!</h1>
-            <p className='line2'>Your final score is</p>
+            <p className='line2'>Your final score is {Number(localStorage.getItem("userScore"))}</p>
             <form  className='form' onSubmit={handleSubmit}>
             <label className='label'>Enter initials:</label>
             <input type='text' id="input" />
