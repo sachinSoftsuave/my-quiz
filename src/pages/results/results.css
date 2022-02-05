@@ -1,0 +1,60 @@
+.results {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 200px;
+    justify-content: flex-start;
+    margin-top: 150px;
+    margin-left: 600px;
+    flex-wrap: wrap;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 50px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    border: 1px solid;
+    border-color: rgb(206, 203, 203);
+    border-radius: 25px;
+    box-shadow: 10px 6px #d8d5d5;
+  }
+  
+  .line1 {
+    font-weight: bold;
+    margin-top: 35px;
+    line-height: 70px;
+    margin: 0px;
+  }
+  
+  .line2 {
+    line-height: 30px;
+    margin: 0px;
+  }
+  
+  #input {
+    width: 20%;
+    height: 20px;
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  
+  .form {
+    display: flexbox;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 10px;
+    height: 30px;
+  }
+  
+  .label {
+    margin: 0px;
+  }
+  
+  .submit-btn {
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 10px;
+    border-color: dodgerblue;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 800;
+  }
+  

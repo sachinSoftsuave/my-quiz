@@ -2,7 +2,8 @@ import React from "react";
 import Home from "../pages/home/index"
 import Quiz from "../pages/quiz/index"
 import HighScore from "../pages/highScore";
-
+import Result from "../pages/results/results";
+        
 export const routes = [
   {
     path: "/",
@@ -15,5 +16,9 @@ export const routes = [
   {
     path: "/highscore",
     element: <HighScore />,
+  },
+  {
+    path: "/results",
+    element: <Result />,
   },
 ];
