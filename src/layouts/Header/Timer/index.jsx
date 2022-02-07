@@ -1,23 +1,20 @@
-import React, {useState, useEffect, useContext} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { QuizContext } from "../../../hooks/context";
 import "./index.css";
 
 function Timer() {
-
-  const [minutes, setMinutes] = useState(50);
-  const [isActive, setIsActive] = useState(false);
-  const {isQuizStarted} = useContext(QuizContext);
+  const { isQuizStarted, isActive, setIsActive, minutes, setMinutes } =
+    useContext(QuizContext);
   let navigate = useNavigate();
-  console.log(isQuizStarted,"isQuizStarted");
+  console.log(isQuizStarted, "isQuizStarted");
 
   useEffect(() => {
-    if(isQuizStarted)
-    {
-      setMinutes(50)
-      startTimer()
+    if (isQuizStarted) {
+      setMinutes(50);
+      startTimer();
     }
-  },[isQuizStarted])
+  }, [isQuizStarted]);
 
   function startTimer() {
     setIsActive(!isActive);
@@ -27,12 +24,12 @@ function Timer() {
     let interval = null;
     if (isActive && minutes > 0) {
       interval = setInterval(() => {
-        setMinutes(minutes => minutes - 1);
+        setMinutes((minutes) => minutes - 1);
       }, 1000);
-    } else if(minutes <=0) {
+    } else if (minutes <= 0) {
       clearInterval(interval);
       setIsActive(false);
-      navigate('/results')
+      navigate("/results");
     }
     return () => clearInterval(interval);
   }, [isActive, minutes]);

@@ -15,25 +15,24 @@
   margin-top: 100px;
 }
 
-.line1 {
+.titleText {
   font-weight: bold;
   margin-top: 40px;
   line-height: 60px;
   margin: 0px;
 }
 
-.line2 {
+.subTitleText1 {
   line-height: 30px;
   margin: 0px;
 }
 
-.line3 {
+.subTitleText2 {
   line-height: 40px;
   margin: 0px;
 }
-.startBtnContainer {
-}
-.start-btn {
+
+.startBtn {
   background-color: #358380;
   color: white;
   padding: 10px 20px;
