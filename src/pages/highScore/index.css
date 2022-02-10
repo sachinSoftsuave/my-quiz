@@ -14,7 +14,7 @@
   box-shadow: 10px 6px #d8d5d5;
 }
 
-.back-btn {
+.backBtn {
   background-color: #358380;
   color: white;
   padding: 10px 20px;
@@ -33,7 +33,7 @@
   flex-wrap: wrap;
 }
 
-.clear-btn {
+.clearBtn {
   background-color: #358380;
   color: white;
   padding: 10px 20px;

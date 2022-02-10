@@ -26,15 +26,15 @@ function HighScore() {
       <div className="modelHighScore">
         <h1>Highscores</h1>
         {usersData.map((user, index) => (
-          <div>
+          <div key={index}>
             <span>{`${index + 1}. ${user.name} - ${user.score}`}</span>
           </div>
         ))}
         <div className="btnWrapper">
-          <button className="back-btn" onClick={goback}>
+          <button className="backBtn" onClick={goback}>
             GoBack
           </button>
-          <button className="clear-btn" onClick={clearUserDetails}>
+          <button className="clearBtn" onClick={clearUserDetails}>
             Clear Highscore
           </button>
         </div>
