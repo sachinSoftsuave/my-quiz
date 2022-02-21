@@ -11,7 +11,7 @@
   border: 1px solid;
   border-color: rgb(206, 203, 203);
   border-radius: 25px;
-  box-shadow: 10px 6px #d8d5d5;
+  box-shadow: 6px 3px #d8d5d5;
 }
 
 .backBtn {
@@ -43,4 +43,10 @@
   font-weight: 400;
   cursor: pointer;
   border: none;
+}
+
+@media screen and (max-width: 300px) {
+  .clearBtn {
+    padding: 10px 17px;
+  }
 }

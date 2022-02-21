@@ -1,15 +1,13 @@
-import React, { useContext } from "react";
-import "./index.css";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { QuizContext } from "../../hooks/context";
+
+import "./index.css";
 
 function Home() {
-  let navigate = useNavigate();
-  const {setQuizStarted} = useContext(QuizContext);
+  const navigate = useNavigate();
 
   function handleStart() {
-    setQuizStarted(true)
-    navigate("/quiz");
+    navigate("/quizmode");
   }
 
   return (
@@ -20,8 +18,7 @@ function Home() {
           Try to answer to code-related question within the timelimit
         </p>
         <p className="subTitleText2">
-          Keep in mind that incorrect answers will penalize your score/time by
-          ten seconds
+          Keep in mind that incorrect answers will penalize your score/time 
         </p>
         <div className="startBtnContainer">
           <button className="startBtn" onClick={handleStart}>

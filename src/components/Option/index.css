@@ -11,3 +11,6 @@
       color: #fff;
       text-transform: capitalize;
  }
+ .optionsContainer:hover{
+      background-color: orange;
+ }

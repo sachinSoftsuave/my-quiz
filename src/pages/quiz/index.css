@@ -11,10 +11,9 @@
     border: 1px solid;
     border-color: rgb(206, 203, 203);
     border-radius: 25px;
-    box-shadow:  10px 6px #d8d5d5;
+    box-shadow:  6px 3px #d8d5d5;
     padding: 25px 40px;
     margin-top: 100px;
-    width: 600px;
  }
  
  .quizeQuestion {

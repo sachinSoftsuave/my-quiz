@@ -1,17 +1,18 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { QuizContext } from "../../../hooks/context";
+
+import { QuizContext } from "../../../Context/index";
+
 import "./index.css";
 
 function Timer() {
   const { isQuizStarted, isActive, setIsActive, minutes, setMinutes } =
     useContext(QuizContext);
   let navigate = useNavigate();
-  console.log(isQuizStarted, "isQuizStarted");
 
   useEffect(() => {
     if (isQuizStarted) {
-      setMinutes(50);
+      setMinutes(100);
       startTimer();
     }
   }, [isQuizStarted]);

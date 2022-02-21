@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./index.css";
 
 function Result() {
-  let navigate = useNavigate();
-  let [showError, setShowError] = useState(false);
-  let [showMessage, setShowMessage] = useState(false);
+  const navigate = useNavigate();
+  const [showError, setShowError] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
+  const inputRef = useRef(null);
 
   const updateUsers = () => {
-    const userName = document.getElementById("userName").value;
+  //  const userName = document.getElementById("userName").value;
+  const userName = inputRef.current.value;
+   
     if (userName.length === 0) {
       setShowMessage(true);
     } else {
@@ -18,19 +21,18 @@ function Result() {
         name: userName,
         score: Number(localStorage.getItem("userScore")),
       };
-      let usersList = JSON.parse(localStorage.getItem("usersList")) || [];
+      const usersList = JSON.parse(localStorage.getItem("usersList")) || [];
 
       const isUserExists =
         usersList.find(
           (user) => user.name.toLowerCase() === userName.toLowerCase()
         ) || "";
       if (isUserExists) {
-        console.log("user exists");
         setShowError(true);
       } else {
         usersList.push(userData);
         localStorage.setItem("usersList", JSON.stringify(usersList));
-        navigate("/highscore");
+        navigate("/high_score");
       }
     }
   };
@@ -40,6 +42,7 @@ function Result() {
     setShowError(false);
     updateUsers();
   }
+
   return (
     <div className="resultsContainer">
       <div className="modelResults">
@@ -49,19 +52,15 @@ function Result() {
         </p>
         <form className="form" onSubmit={handleSubmit}>
           <label className="label">Enter initials:</label>
-          <input type="text" className="input" id="userName" />
+          <input type="text" className="input" ref={inputRef} />
           <button className="submitBtn">Submit</button>
         </form>
         <div>
-          {showError === true ? (
+          {showError && (
             <p className="errorMessage"> please enter a unique name </p>
-          ) : (
-            <div></div>
           )}
-          {showMessage === true ? (
-            <p className="errorMessage"> please enter the initials </p>
-          ) : (
-            <div></div>
+          {showMessage && (
+            <p className="errorMessage1"> please enter the initials </p>
           )}
         </div>
       </div>

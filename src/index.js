@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
 import "./index.css";
+
 import App from "./App";
-import Main from "./hooks/context";
+import ContextProvider from "./Context/index";
+
 ReactDOM.render(
-  <Main>
+  <ContextProvider>
     <App />
-  </Main>,
+  </ContextProvider>,
   document.getElementById("root")
 );
 

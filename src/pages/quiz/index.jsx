@@ -1,44 +1,46 @@
 import React, { Fragment, useContext, useEffect, useState } from "react";
-import "./index.css";
+import { useNavigate } from "react-router-dom";
+
 import { questions } from "../../db/questionDb";
 import Option from "../../components/Option";
-import { useNavigate } from "react-router-dom";
-import { QuizContext } from "../../hooks/context";
+import { QuizContext } from "../../Context/index";
+
+import "./index.css";
 
 function Quiz() {
-  const [selectedQuestion, setSelectedQuestion] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState("");
-  const { setIsActive } = useContext(QuizContext);
+  const { setIsActive, mode} = useContext(QuizContext);
+  const [selectedQuestion, setSelectedQuestion] = useState(mode*5);
   const [disabled, setDisabled] = useState(false);
-  let navigate = useNavigate();
-
+  const navigate = useNavigate();
+  
   const isRightAnswer = (id) => {
     return questions[selectedQuestion].answer.id === id ? true : false;
   };
-
+    
   useEffect(() => {
     localStorage.removeItem("userScore");
   }, []);
 
   function displayAnswer(id) {
-    setSelectedAnswer(id);
+    var co = document.getElementById(id);
     if (isRightAnswer(id) && disabled === false) {
       const score = Number(localStorage.getItem("userScore")) + 1;
       localStorage.setItem("userScore", score);
       setDisabled(true);
-      console.log(score);
+      co.style.backgroundColor = ('Green');
+    } else {
+      co.style.backgroundColor = ('Red');
     }
 
     if (selectedQuestion === questions.length - 1) {
       setTimeout(() => {
-        setSelectedAnswer(questions.length - 1);
         setIsActive(false);
         setDisabled(false);
         navigate("/results");
       }, 1000);
-    } else {
+    } else { 
       setTimeout(() => {
-        setSelectedAnswer("");
+        co.style.backgroundColor = ('');
         setSelectedQuestion(selectedQuestion + 1);
         setDisabled(false);
       }, 1000);
@@ -60,14 +62,6 @@ function Quiz() {
             />
           </Fragment>
         ))}
-        <div className="resultContainer">
-          <p>
-            {!!selectedAnswer.length &&
-              (questions[selectedQuestion].answer.id === selectedAnswer
-                ? "Correct!"
-                : "Incorrect!")}
-          </p>
-        </div>
       </div>
     </div>
   );

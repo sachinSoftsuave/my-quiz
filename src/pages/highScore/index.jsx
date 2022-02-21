@@ -1,11 +1,12 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { QuizContext } from "../../hooks/context";
+
+import { QuizContext } from "../../Context/index";
 
 import "./index.css";
 
 function HighScore() {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const [usersData, setUsersData] = useState(
     JSON.parse(localStorage.getItem("usersList")) || []
   );
@@ -20,13 +21,25 @@ function HighScore() {
     localStorage.removeItem("usersList");
     setUsersData([]);
   };
+  
+  function compare( a, b ) {
+    if ( a.score > b.score ){
+      return -1;
+    }
+    if ( a.score < b.score ){
+      return 1;
+    }
+    return 0;
+  }
+
+  usersData.sort(compare);
 
   return (
     <div className="scoreContainer">
       <div className="modelHighScore">
         <h1>Highscores</h1>
         {usersData.map((user, index) => (
-          <div key={index}>
+          <div className="score" key={index}>
             <span>{`${index + 1}. ${user.name} - ${user.score}`}</span>
           </div>
         ))}
