@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timer component renders the snapshot of timer component 1`] = `
+<Timer>
+  <div>
+    <p
+      className="timer"
+    >
+       Time:
+       
+    </p>
+  </div>
+</Timer>
+`;

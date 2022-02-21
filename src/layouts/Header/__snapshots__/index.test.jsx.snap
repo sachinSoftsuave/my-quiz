@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header component it renders the snapshot of header component 1`] = `
+<div
+  className="header"
+>
+  <Navbar />
+  <Timer />
+</div>
+`;

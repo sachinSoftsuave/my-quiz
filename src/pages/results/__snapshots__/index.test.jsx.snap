@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`results component should render correctly 1`] = `
+<Result
+  usersList={
+    Array [
+      "A",
+      "B",
+      "C",
+      "D",
+    ]
+  }
+>
+  <div
+    className="resultsContainer"
+  >
+    <div
+      className="modelResults"
+    >
+      <h1
+        className="headerText"
+      >
+        All done!
+      </h1>
+      <p
+        className="subHeaderText"
+      >
+        Your final score is 
+        0
+      </p>
+      <form
+        className="form"
+        onSubmit={[Function]}
+      >
+        <label
+          className="label"
+        >
+          Enter initials:
+        </label>
+        <input
+          className="input"
+          type="text"
+        />
+        <button
+          className="submitBtn"
+        >
+          Submit
+        </button>
+      </form>
+      <div>
+        <div />
+        <div />
+      </div>
+    </div>
+  </div>
+</Result>
+`;

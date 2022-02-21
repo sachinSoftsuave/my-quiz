@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home/> it renders the snapshot of home component 1`] = `
+<Home>
+  <div
+    className="homeContainer"
+  >
+    <div
+      className="modelHome"
+    >
+      <h1
+        className="titleText"
+      >
+        Coding Quiz Challenge
+      </h1>
+      <p
+        className="subTitleText1"
+      >
+        Try to answer to code-related question within the timelimit
+      </p>
+      <p
+        className="subTitleText2"
+      >
+        Keep in mind that incorrect answers will penalize your score/time by ten seconds
+      </p>
+      <div
+        className="startBtnContainer"
+      >
+        <button
+          className="startBtn"
+          onClick={[Function]}
+        >
+          Start Quiz
+        </button>
+      </div>
+    </div>
+  </div>
+</Home>
+`;

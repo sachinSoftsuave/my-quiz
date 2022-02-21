@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders highscore component render a snapshot of highscore component 1`] = `ReactWrapper {}`;
+
+exports[`renders highscore component should render correctly 1`] = `
+<HighScore
+  usersData={
+    Array [
+      "A",
+      "B",
+      "C",
+    ]
+  }
+>
+  <div
+    className="scoreContainer"
+  >
+    <div
+      className="modelHighScore"
+    >
+      <h1>
+        Highscores
+      </h1>
+      <div
+        className="btnWrapper"
+      >
+        <button
+          className="backBtn"
+          onClick={[Function]}
+        >
+          GoBack
+        </button>
+        <button
+          className="clearBtn"
+          onClick={[Function]}
+        >
+          Clear Highscore
+        </button>
+      </div>
+    </div>
+  </div>
+</HighScore>
+`;

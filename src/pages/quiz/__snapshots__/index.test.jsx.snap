@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders quiz component it renders the snapshot of quiz component 1`] = `
+<Quiz>
+  <div
+    className="quizContainer"
+  >
+    <div
+      className="quizModel"
+    >
+      <h2
+        className="quizeQuestion"
+      >
+        Commonly used data types DO NOT include:
+      </h2>
+      <Option
+        displayAnswer={[Function]}
+        index={0}
+        option={
+          Object {
+            "id": "1",
+            "value": "strings",
+          }
+        }
+      >
+        <div
+          className="optionsContainer"
+          key="0"
+        >
+          <p
+            className="option"
+            onClick={[Function]}
+          >
+            1. strings
+          </p>
+        </div>
+      </Option>
+      <Option
+        displayAnswer={[Function]}
+        index={1}
+        option={
+          Object {
+            "id": "2",
+            "value": "booleans",
+          }
+        }
+      >
+        <div
+          className="optionsContainer"
+          key="1"
+        >
+          <p
+            className="option"
+            onClick={[Function]}
+          >
+            2. booleans
+          </p>
+        </div>
+      </Option>
+      <Option
+        displayAnswer={[Function]}
+        index={2}
+        option={
+          Object {
+            "id": "3",
+            "value": "alerts",
+          }
+        }
+      >
+        <div
+          className="optionsContainer"
+          key="2"
+        >
+          <p
+            className="option"
+            onClick={[Function]}
+          >
+            3. alerts
+          </p>
+        </div>
+      </Option>
+      <Option
+        displayAnswer={[Function]}
+        index={3}
+        option={
+          Object {
+            "id": "4",
+            "value": "numbers",
+          }
+        }
+      >
+        <div
+          className="optionsContainer"
+          key="3"
+        >
+          <p
+            className="option"
+            onClick={[Function]}
+          >
+            4. numbers
+          </p>
+        </div>
+      </Option>
+      <div
+        className="resultContainer"
+      >
+        <p />
+      </div>
+    </div>
+  </div>
+</Quiz>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders navbar component should test Navbar component 1`] = `
+<Navbar>
+  <div>
+    <a
+      className="linkHighScore"
+      href="./highScore"
+    >
+      View Highscore 
+      <i
+        className="fas fa-hand-point-left fa-lg"
+      />
+    </a>
+  </div>
+</Navbar>
+`;
